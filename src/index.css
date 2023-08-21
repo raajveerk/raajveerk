@@ -1,13 +1,265 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    background-color: #130713;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+:root {
+  --light: #9CECFB;
+  --dark: #2d6ed6;
+  --pink: #f146aa;
+  --white: rgb(255, 255, 255);
+
+  --border: rgb(3, 169, 244);
+  --g1: rgb(98, 0, 234);
+  --g2: rgb(236, 64, 122);
+  --g3: rgb(253, 216, 53);
+
+  --darker: rgb(20, 20, 20);
+  --yellow: rgb(253, 216, 53);
+  --blue: rgb(98, 0, 234);
+  
+  --c1: #000000;
+  --c2: #2d6ed6;
+  
+  --left-color: var(--c1);
+  --right-color: var(--c2);
+}
+
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+
+  to {
+    background-position: -200% center;
+  }
+}
+
+
+@keyframes background-panDos {
+  from {
+    background-position: 0% center;
+  }
+
+  to {
+    background-position: 200% center;
+  }
+}
+
+@keyframes icons {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(8px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes iconsDos {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes blobAm {
+  0% {
+    border-radius: 19.3em 26.6em 15.42em 21.88em;
+  }
+  25% {
+    border-radius: 18.68em 43.33em 16.26em 15.58em;
+  }
+  50% {
+    border-radius: 12.44em 15.52em 69.42em 27.9em;
+  }
+  75% {
+    border-radius: 35.78em 18.62em 12.12em 9.38em;
+  }
+  100% {
+    border-radius: 19.3em 26.6em 15.42em 21.88em;
+  }
+}
+
+@keyframes blobAmDos {
+  0% {
+    border-radius: 16.3em 19.6em 22.42em 12.88em;
+  }
+  25% {
+    border-radius: 28.68em 13.33em 46.26em 15.58em;
+  }
+  50% {
+    border-radius: 32.44em 25.52em 19.42em 67.9em;
+  }
+  75% {
+    border-radius: 19.78em 38.62em 12.12em 22.38em;
+  }
+  100% {
+    border-radius: 16.3em 19.6em 22.42em 12.88em;
+  }
+}
+
+.wrapper {
+  perspective: 10px;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.headerForBlob {
+  transform-style: preserve-3d;
+  height: 100%;
+}
+
+.blobBackground {
+  animation: blobAm 8s ease-in-out infinite;
+  transform: translateZ(-10px) scale(2);
+}
+
+.blobBackgroundDos {
+  animation: blobAmDos 8s ease-in-out infinite;
+  transform: translateZ(-10px) scale(2);
+}
+
+.foreground {
+  transform: translateZ(0px);
+}
+
+.head {
+  animation: background-pan 3s linear infinite;
+  background: linear-gradient(
+    to right,
+    var(--dark),
+    var(--pink),
+    var(--light),
+    var(--dark)
+  );
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+}
+
+.headDos {
+  animation: background-panDos 4s linear infinite;
+  background: linear-gradient(
+    to right,
+    var(--light),
+    var(--pink),
+    var(--dark),
+    var(--light)
+  );
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+}
+
+@media only screen and (min-width: 1024px) {
+  
+.rcb {
+  rotate: -6deg;
+  scale: 1.5;
+  animation: iconsDos 4s ease-in-out infinite;
+}
+.jsb {
+  rotate: 6deg;
+  scale: 1.5;
+  animation: iconsDos 5s ease-in-out infinite;
+}
+.jvb {
+  rotate: -12deg;
+  scale: 1.5;
+  animation: icons 4.4s ease-in-out infinite;
+}
+.pyb {
+  rotate: 16deg;
+  scale: 1.5;
+  animation: icons 5.6s ease-in-out infinite;
+}
+}
+
+@media only screen and (min-width: 768px) {
+  
+.rcb {
+  rotate: -6deg;
+  scale: 1.2;
+  animation: icons 4s ease-in-out infinite;
+}
+.jsb {
+  rotate: 6deg;
+  scale: 1.2;
+  animation: iconsDos 5s ease-in-out infinite;
+}
+.jvb {
+  rotate: -12deg;
+  scale: 1.2;
+  animation: iconsDos 4.4s ease-in-out infinite;
+}
+.pyb {
+  rotate: 16deg;
+  scale: 1.2;
+  animation: icons 5.6s ease-in-out infinite;
+}
+}
+
+@media only screen and (min-width: 640px) {
+  
+.rcb {
+  rotate: -6deg;
+  scale: 1.3;
+  animation: icons 4s ease-in-out infinite;
+}
+.jsb {
+  rotate: 6deg;
+  scale: 1.3;
+  animation: iconsDos 5s ease-in-out infinite;
+}
+.jvb {
+  rotate: -12deg;
+  scale: 1.3;
+  animation: iconsDos 4.4s ease-in-out infinite;
+}
+.pyb {
+  rotate: 16deg;
+  scale: 1.3;
+  animation: icons 5.6s ease-in-out infinite;
+}
+}
+
+@media only screen and (min-width: 350px) {
+  
+.rcb {
+  rotate: -6deg;
+  scale: 1.3;
+  animation: icons 4s ease-in-out infinite;
+}
+.jsb {
+  rotate: 6deg;
+  scale: 1.3;
+  animation: iconsDos 5s ease-in-out infinite;
+}
+.jvb {
+  rotate: -12deg;
+  scale: 1.3;
+  animation: iconsDos 4.4s ease-in-out infinite;
+}
+.pyb {
+  rotate: 16deg;
+  scale: 1.3;
+  animation: icons 5.6s ease-in-out infinite;
+}
 }
