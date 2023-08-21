@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/raajveerk/static/css/main.acd73f3b.css",
+    "main.js": "/raajveerk/static/js/main.158e323b.js",
+    "static/js/787.44c92f1d.chunk.js": "/raajveerk/static/js/787.44c92f1d.chunk.js",
+    "static/media/portrait-lg.png": "/raajveerk/static/media/portrait-lg.479e8c5206cfe5d2146a.png",
+    "static/media/portrait-md.png": "/raajveerk/static/media/portrait-md.37148ca53f1a67ea43f2.png",
+    "static/media/RESUME_Raajveer-Khattar.pdf": "/raajveerk/static/media/RESUME_Raajveer-Khattar.d9525b3f043f23c0b18a.pdf",
+    "static/media/react-base.svg": "/raajveerk/static/media/react-base.6482a00ffb1abb970c49480fc4d58e1c.svg",
+    "static/media/js-base.svg": "/raajveerk/static/media/js-base.50ec9af83f07f9f87e1420c186964ca9.svg",
+    "static/media/java-base.svg": "/raajveerk/static/media/java-base.c5f118c4fce004d09b1a6276dbe52c42.svg",
+    "static/media/python-base.svg": "/raajveerk/static/media/python-base.1f1dff31248d448a786088026db1e38d.svg",
+    "index.html": "/raajveerk/index.html",
+    "main.acd73f3b.css.map": "/raajveerk/static/css/main.acd73f3b.css.map",
+    "main.158e323b.js.map": "/raajveerk/static/js/main.158e323b.js.map",
+    "787.44c92f1d.chunk.js.map": "/raajveerk/static/js/787.44c92f1d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.acd73f3b.css",
+    "static/js/main.158e323b.js"
+  ]
+}
